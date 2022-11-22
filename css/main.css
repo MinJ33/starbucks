@@ -19,6 +19,57 @@ a{
   margin: 0 auto;
   position: relative;
 }
+.btn{
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: .4s;
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse{
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover{
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover {
+  color: #FFF;
+  background-color: #592B18;
+}
+.btn.btn--gold {
+  color: #D9AA8A;
+  border-color: #D9AA8A;
+}
+.btn.btn--gold:hover {
+  color: #FFF;
+  background-color: #D9AA8A;
+}
+.btn.btn--white {
+  color: #FFF;
+  border-color: #FFF;
+}
+.btn.btn--white:hover {
+  color: #333;
+  background-color: #FFF;
+}
 
 /* HEADER */
 header {
@@ -29,6 +80,7 @@ header {
   /* block 요소는 가로너비가 최대한 늘어나려는 성질을 가지고 있지만 position fixed와 absolute는 가로너비가 최소한으로 줄어들려고 시도를 한다 그래서 width: 100%추가 */
   position: fixed;
   top: 0;
+  z-index: 9;
 }
 header > .inner{
   height: 120px;
