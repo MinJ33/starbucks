@@ -21,9 +21,17 @@ const badgeEl = document.querySelector('header .badges');
 window.addEventListener('scroll', _.throttle(function() {
   console.log('scroll!');
   if (window.scrollY > 500){
-    badgeEl.style.display = 'none';
+    // hide badges
+    gsap.to(badgeEl, .6, {
+      opacity: 0,
+      display: 'none'
+    });
   } else {
-    badgeEl.style.display = 'block';
+    // show badges
+    gsap.to(badgeEl, .6, {
+      opacity: 1,
+      display: 'block'
+    });
   }
   // 0.3 sec
 }, 300));
