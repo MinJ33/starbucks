@@ -21,8 +21,13 @@ a{
 
 /* HEADER */
 header {
+  /* position: relative; */
+  width: 100%;
   background-color: #f6f5f0;
   border-bottom: 1px solid #c8c8c8;
+  /* block 요소는 가로너비가 최대한 늘어나려는 성질을 가지고 있지만 position fixed와 absolute는 가로너비가 최소한으로 줄어들려고 시도를 한다 그래서 width: 100%추가 */
+  position: fixed;
+  top: 0;
 }
 header > .inner{
   height: 120px;
@@ -167,4 +172,16 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   color: #64a70b;
   margin: 4px 0 14px;
+}
+header .badges{
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+header .badges .badge{
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, .15);
+  cursor: pointer;
 }
