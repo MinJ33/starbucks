@@ -51,3 +51,13 @@ new Swiper('.notice-line .swiper-container', {
   autoplay: true,
   loop: true
 });
+
+new Swiper('.promotion .swiper-container', {
+  slidersPerView: 3, // number of slides to show at once
+  spaceBetween: 10,
+  centeredSlides: true, // slide #1 located in the middle
+  loop: true,
+  autoplay: {
+    delay: 5000 // 5 sec
+  }
+});
