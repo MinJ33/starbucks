@@ -61,4 +61,13 @@ new Swiper('.promotion .swiper-container', {
   centeredSlides: true, // slide #1 located in the middle
   loop: true,
 
+  pagination:{
+    el: '.promotion .swiper-pagination', // Page number element selector
+    clickable: true, 
+  }, 
+  navigation: {
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
+  }
 });
+
