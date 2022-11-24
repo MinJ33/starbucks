@@ -483,3 +483,22 @@ header .badges .badge{
   height: 241px;
 
 }
+.rewards .btn-group{
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  width: 250px;
+  display: flex;
+  /* if element overflows 250px switch to the next line */
+  flex-wrap: wrap; 
+}
+.rewards .btn-group .btn.sign-up{
+  margin-right: 10px;
+}
+.rewards .btn-group .btn.sign-in{
+  width: 110px;
+}
+.rewards .btn-group .btn.gift{
+  margin-top: 10px;
+  flex-grow: 1;
+}
