@@ -71,3 +71,19 @@ new Swiper('.promotion .swiper-container', {
   }
 });
 
+// This section will be show || hide
+const promotionEl = document.querySelector('.promotion');
+
+// If we click promotionToggleBtn
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function(){
+ isHidePromotion = !isHidePromotion
+  if (isHidePromotion){
+    // if isHidePromotion is true add a class name 'hide' to promotionEl
+    promotionEl.classList.add('hide');
+  }else{
+    promotionEl.classList.remove('hide');
+  }
+
+});
