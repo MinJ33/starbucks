@@ -607,3 +607,28 @@ header .badges .badge{
   top: 0;
   right: 0;
 }
+
+/* PICK YOUR FAVOURITE */
+.pick-your-favourite{
+  background-image: url("../images/favorite_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+.pick-your-favourite .inner{
+  padding: 110px 0;
+}
+.pick-your-favourite .text-group{
+  margin-left: 100px;
+  width: 362px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.pick-your-favourite .text-group .title{
+  margin-bottom: 40px; 
+}
+.pick-your-favourite .text-group .description{
+  margin-bottom: 40px;
+}
