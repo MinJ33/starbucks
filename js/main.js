@@ -70,6 +70,12 @@ new Swiper('.promotion .swiper-container', {
     nextEl: '.promotion .swiper-next'
   }
 });
+new Swiper('.awards .swiper-container', {
+  autoplay: true,
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5
+});
 
 // This section will be show || hide
 const promotionEl = document.querySelector('.promotion');
