@@ -107,3 +107,16 @@ function floatingObject(selector, delay, size){
 floatingObject('.floating1', 1, 15);
 floatingObject('.floating2', .5, 15);
 floatingObject('.floating3', 1.5, 20);
+
+const spyEls = document.querySelectorAll('section.scroll-spy');
+spyEls.forEach(function(spyEl) {
+
+  //method chaining
+  new ScrollMagic
+  .Scene({
+    triggerElement: spyEl,
+    triggerHook: .8 // triggerElement is in line with the triggerHook, the animation will be triggered
+  })
+  .setClassToggle(spyEl, 'show')
+  .addTo(new ScrollMagic.Controller());
+});
