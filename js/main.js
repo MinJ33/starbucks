@@ -16,6 +16,7 @@ searchInputEl.addEventListener('blur', function() {
 });
 
 const badgeEl = document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 // _.throttle(func, time)
 // create a throttled function that can only call the func parameter maximally once per every 0.3sec
 window.addEventListener('scroll', _.throttle(function() {
@@ -25,16 +26,30 @@ window.addEventListener('scroll', _.throttle(function() {
       opacity: 0,
       display: 'none'
     });
+    // show button
+    gsap.to(toTopEl, .2, {
+      x: 0
+    });
   } else {
     // show badges
     gsap.to(badgeEl, .6, {
       opacity: 1,
       display: 'block'
     });
+    // hide button
+    gsap.to(toTopEl, .2, {
+      x: 100
+    });
   }
   // 0.3 sec
 }, 300));
 
+
+toTopEl.addEventListener('click', function (){
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
